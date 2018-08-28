@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:elevation="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/login_border"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="ic"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/dimTextSize_18"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimValue_10"
+                    android:gravity="center|left"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/dimTextSize_16" />
+
+
+                <com.janelaaj.component.CircleImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="@dimen/_50dp"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_margin="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/logo" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="-25dp"
+            android:background="#e6e6e6"
+            android:orientation="vertical">
+
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/card_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_margin="@dimen/_15dp"-->
+                <!--app:cardCornerRadius="15dp"-->
+                <!--android:background="#ffffff"-->
+                <!--card_view:cardCornerRadius="4dp"-->
+                <!--card_view:cardElevation="@dimen/_5dp"-->
+                <!--card_view:elevation="@dimen/_5dp">-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:id="@+id/titleHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="One View"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_18dp"
+                        android:textColor="@color/Text_for_screens" />
+
+                    <ExpandableListView
+                        android:id="@+id/lvExp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:background="#e6e6e6"
+                        android:divider="#e6e6e6"
+                        android:groupIndicator="@null" />
+
+                </LinearLayout>
+            <!--</android.support.v7.widget.CardView>-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/activity_dashboard_drawer"
+        android:layout_gravity="start|bottom"
+        app:headerLayout="@layout/nav_header_dashboard"
+        android:id="@+id/navigation_viewww">
+
+    <include
+        android:id="@+id/navHader"
+        layout="@layout/nav_header_dashboard" />
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

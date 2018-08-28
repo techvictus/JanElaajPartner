@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_100px"
+    android:background="@color/navGreyList"
+    android:orientation="horizontal"
+    android:padding="@dimen/dimValue_10"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:orientation="vertical">
+
+        <com.janelaaj.component.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/nav_header_desc"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimValue_5"
+        android:layout_weight="0.7"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimValue_10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:id="@+id/name_of_doctor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/dimTextSize_16" />
+
+        <TextView
+            android:id="@+id/age_and_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/dimTextSize_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/qualification"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/dimTextSize_16" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/degree"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/dimTextSize_16" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/profileLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimValue_5"
+        android:layout_weight="0.1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000"
+            android:textSize="@dimen/dimTextSize_20" />
+    </LinearLayout>
+</LinearLayout>

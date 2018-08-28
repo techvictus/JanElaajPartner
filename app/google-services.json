@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "609159915286",
+    "firebase_url": "https://janelaaj-android-1527835996054.firebaseio.com",
+    "project_id": "janelaaj-android-1527835996054",
+    "storage_bucket": "janelaaj-android-1527835996054.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609159915286:android:cadef498b06b0ab5",
+        "android_client_info": {
+          "package_name": "com.janelaaj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609159915286-cpvlfa4lvironbe51fjdc3nvh5d9p506.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "609159915286-9hbtvfd42k99lct355lr1uh6nic9u7r7.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "609159915286-tnan0d61v83dr2cthtbs0sm9cte2j5rs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.janelaaj",
+            "certificate_hash": "5de8a9d7cb3f3a9edbe5e7da15f4b3d90d991b0e"
+          }
+        },
+        {
+          "client_id": "609159915286-cpvlfa4lvironbe51fjdc3nvh5d9p506.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSM2UdWCQ5ya_gyYo7VIIS4kvxxdcCTeY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609159915286-cpvlfa4lvironbe51fjdc3nvh5d9p506.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

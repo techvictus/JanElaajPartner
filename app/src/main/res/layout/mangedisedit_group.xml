@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listExpandLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_15dp"
+    android:background="@drawable/button_background3"
+    android:minHeight="@dimen/_40dp"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/lblListHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:layout_weight="1"
+        android:textColor="#595959"
+        android:textSize="16dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkdDiscount"
+        android:layout_width="wrap_content"
+        android:backgroundTint="#595959"
+        android:elevation="@dimen/_10dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:theme="@style/WhiteCheck"
+        android:layout_marginRight="@dimen/_10dp" />
+
+
+</LinearLayout>

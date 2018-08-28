@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#757575</color>
+    <color name="splash_backgroud">#C2C2C2</color>
+    <color name="yellow_light">#ffffff</color>
+    <color name="yellow_dark">#DCCB49</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="heart_color">#b3adad</color>
+    <color name="white">#FFFFFF</color>
+    <color name="facebook_color">#3F51B5</color>
+    <color name="white1">#FFFFFF</color>
+    <color name="text_color_white">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="background">#F2F3F4</color>
+    <color name="background_grey">#AD8851</color>
+    <color name="background_grey_dark">#be904a</color>
+    <color name="red">#ff0000</color>
+    <color name="secondary_text2">#BCDBCA</color>
+    <color name="background_blue">#f0f3f8</color>
+    <color name="header">#394048</color>
+    <color name="dark_green">#8dc34b</color>
+    <color name="green">#2a9e30</color>
+    <color name="green_light">#b9e28b</color>
+    <color name="order_color">#f15e25</color>
+    <color name="hint_grey">#a3a3a3</color>
+    <color name="shop_name">#2f5c8f</color>
+    <color name="facebook_dark">#3b5998</color>
+    <color name="facebook_light">#8b9dc3</color>
+    <color name="icons">#f3f5fa</color>
+    <color name="login_box_outline">#D6CB6F</color>
+    <color name="down_green">#D8DDB5</color>
+    <color name="Yellow_light">#EBE685</color>
+    <color name="Text_for_screens">#5C5C5C</color>
+
+
+
+    <!--new color-->
+    <!--second time color code given by sir-->
+    <color name="Header_bg">#388e3c</color>
+    <color name="Header_fg">#ffffff</color>
+    <color name="Body_bg">#eeeeee</color>
+    <color name="Yellow_color">#ffc107</color>
+    <color name="Light_Green">#8bc34a</color>
+    <color name="Dark_color"> #212121</color>
+    <color name="Dark_red">#E73C4E</color>
+    <color name="Submit_btnBg">#D9CC6E</color>
+    <color name="Light_Color_Disable_btns">#666666</color>
+    <color name="Twitter">#33ccff</color>
+    <color name="Facebookr">#3a589e</color>
+    <color name="Phone_btn">#d69123</color>
+    <color name="Done_text_btn">#388e3c</color>
+    <color name="Edit_btn">#8bc34a</color>
+    <color name="Delete_btn">#ff5252</color>
+    <color name="Pay_online_btn">#8bc34a</color>
+    <color name="spots_dialog_color">#4c80ba</color>
+    <color name="search_color">#3A949C</color>
+
+    <color name="buttocolor">#0866C6</color>
+    <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
+
+    <color name="login_button">#31B2F7</color>
+    <color name="google_color">#db3236</color>
+    <color name="fb_color">#3b5998</color>
+    <color name="lightBlack">#808080</color>
+
+    <color name="bluelightbutton">#18BFCC</color>
+    <color name="purplebutton">#73309B</color>
+    <color name="centercolor">#5A5C98</color>
+
+    <color name="bgcolor">#C2C2C2</color>
+    <color name="navGrey">#F2F2F2</color>
+    <color name="navGreyList">#D9D9D9</color>
+
+    <color name="graynew">#5D5D5D</color>
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#93c6fd</color>
+    <color name="dot_light_screen4">#e4b5fc</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#d1395c</color>
+    <color name="dot_dark_screen2">#14a895</color>
+    <color name="dot_dark_screen3">#2278d4</color>
+    <color name="dot_dark_screen4">#a854d4</color>
+    <color name="text_color_hint">#D3D3CF</color>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+</resources>

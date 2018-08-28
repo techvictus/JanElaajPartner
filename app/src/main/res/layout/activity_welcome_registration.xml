@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:elevation="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/login_border"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="ic"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/dimTextSize_18"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimValue_10"
+                    android:gravity="center|left"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/dimTextSize_16" />
+
+
+                <com.janelaaj.component.CircleImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="@dimen/_50dp"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_margin="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/logo" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bgcolor"
+            tools:context=".activitys.WelcomeRegistrationActivity">
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                card_view:cardCornerRadius="15dp"
+                card_view:cardElevation="@dimen/_5dp"
+                card_view:elevation="@dimen/_5dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="@dimen/_10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:text="Welcome"
+                        android:id="@+id/welcome_dr_ashish"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_16dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_40dp"
+                        android:text="CONGRATULATIONS!"
+                        android:id="@+id/congratulations"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:id="@+id/your_profile_registration"
+                        android:text="Your Profile registration has been completed successfully."
+                        android:textSize="@dimen/_16dp"
+                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/btn_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_15dp"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_80dp"
+                        android:background="@drawable/login_border"
+                        android:gravity="center"
+                        android:minWidth="@dimen/_160dp"
+                        android:text="Exit"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/activity_dashboard_drawer"
+        android:id="@+id/navigation_view"
+        app:headerLayout="@layout/nav_header_dashboard"
+        android:layout_gravity="start|bottom">
+
+        <include
+            android:id="@+id/navHader"
+            layout="@layout/nav_header_dashboard" />
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

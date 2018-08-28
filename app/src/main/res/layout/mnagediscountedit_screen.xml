@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:elevation="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/login_border"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="ic"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/dimTextSize_18"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimValue_10"
+                    android:gravity="center|left"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/dimTextSize_16" />
+
+
+                <com.janelaaj.component.CircleImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="@dimen/_50dp"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_margin="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/logo" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bgcolor"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        card_view:cardElevation="@dimen/_5dp"
+        card_view:elevation="@dimen/_5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="@dimen/_20dp"
+        android:layout_marginLeft="@dimen/_20dp"
+        android:layout_marginBottom="@dimen/_20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10dp"
+                android:text="Manage Location Discounts"
+                android:textAlignment="center"
+                android:textSize="@dimen/_18dp"
+                android:id="@+id/manage_discount_for"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/locationheader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="@dimen/_18dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/titledisc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10dp"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_margin="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:text="You can Enable Discounts for any of your time slots for the above locations. Discounts  will be applicable only on the options that you select."
+                android:textAlignment="center"
+                android:textSize="@dimen/_14dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="SUN"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_14dp" />
+
+                <TextView
+                    android:layout_width="@dimen/_40dp"
+                    android:layout_height="@dimen/_40dp"
+                    android:text="MON"
+                    android:gravity="center"
+                    android:id="@+id/mon"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="TUE"
+                    android:id="@+id/tue"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_14dp" />
+
+                <TextView
+                    android:id="@+id/wed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="WED"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="THU"
+                    android:id="@+id/thu"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="FRI"
+                    android:id="@+id/fri"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="SAT"
+                    android:id="@+id/sat"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_14dp"/>
+
+
+            </LinearLayout>
+
+
+            <ExpandableListView
+                android:id="@+id/lvExp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10dp"
+                android:layout_weight="1"
+                android:dividerHeight="@dimen/_5dp"
+                android:groupIndicator="@null"
+                android:background="@drawable/expandable_selector"
+                android:cacheColorHint="@color/colorPrimary"
+                android:padding="@dimen/_5dp" />
+
+
+            <Button
+                android:id="@+id/apply_my_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_15dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:minWidth="@dimen/_160dp"
+                android:text="@string/applydiscount"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+    </LinearLayout>
+
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/activity_dashboard_drawer"
+        android:id="@+id/navigation_view"
+        app:headerLayout="@layout/nav_header_dashboard"
+        android:layout_gravity="start|bottom">
+
+        <include
+            android:id="@+id/navHader"
+            layout="@layout/nav_header_dashboard" />
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

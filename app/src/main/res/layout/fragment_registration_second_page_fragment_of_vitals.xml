@@ -1,0 +1,195 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="30dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/aadharno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_29dp"
+        android:layout_marginRight="@dimen/_29dp"
+        android:layout_marginTop="@dimen/_16dp">
+
+        <EditText
+            android:id="@+id/Aadhar_No"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Aadhar No*"
+            android:maxLines="1"
+            android:inputType="text"                            android:paddingRight="@dimen/_10dp"
+            android:textSize="@dimen/_14dp" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/addLine1_nameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_29dp"
+        android:layout_marginRight="@dimen/_29dp"
+        android:layout_marginTop="@dimen/_16dp">
+
+        <EditText
+            android:id="@+id/Address1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address Line 1"
+            android:maxLines="1"
+            android:inputType="text"                            android:paddingRight="@dimen/_10dp"
+            android:textSize="@dimen/_14dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/addLine2_nameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_29dp"
+        android:layout_marginRight="@dimen/_29dp"
+        android:layout_marginTop="@dimen/_16dp">
+
+        <EditText
+            android:id="@+id/Address2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address Line 2"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/city"
+            android:inputType="text"                            android:paddingRight="@dimen/_10dp"
+            android:textSize="@dimen/_14dp" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_29dp"
+        android:layout_marginRight="@dimen/_29dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:minWidth="@dimen/_240dp"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/village_nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_5dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/City"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/District"
+                android:inputType="text"
+                android:textSize="@dimen/_14dp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/dirst_nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/District"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_information"
+                android:hint="District"
+                android:nextFocusDown="@id/Pincode"
+                android:paddingRight="@dimen/_10dp"
+                android:textSize="@dimen/_14dp"
+                android:maxLines="1"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_29dp"
+        android:layout_marginRight="@dimen/_29dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Spinner
+            android:id="@+id/state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.5">
+
+
+        </Spinner>
+
+
+        <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:id="@+id/state_nameLayout"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/_5dp"-->
+        <!--android:layout_marginTop="@dimen/_5dp"-->
+        <!--android:layout_weight="0.5">-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/state"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="@dimen/_3dp"-->
+        <!--android:hint="State*"-->
+        <!--android:maxLines="1"-->
+        <!--android:drawableRight="@drawable/ic_down_arrow"-->
+        <!--android:textSize="@dimen/_14dp" />-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/pincode_nameLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_weight="0.5">
+
+            <EditText
+                android:id="@+id/Pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3dp"
+                android:hint="Pincode"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textSize="@dimen/_14dp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Register"
+        android:background="@drawable/button_background"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

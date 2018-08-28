@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:elevation="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/login_border"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="ic"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/dimTextSize_18"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimValue_10"
+                    android:gravity="center|left"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/dimTextSize_16" />
+
+
+                <com.janelaaj.component.CircleImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="@dimen/_50dp"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_margin="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/logo" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgcolor"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15dp"
+            android:text="Quick Sets"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_16dp" />
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/discountcard_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15dp"
+            android:background="#fff"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="@dimen/_5dp"
+            card_view:elevation="@dimen/_5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/_55dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/discountrowContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/_55dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/discountimg"
+                        android:layout_width="@dimen/_55dp"
+                        android:layout_height="@dimen/_55dp"
+                        android:layout_margin="@dimen/_5dp"
+                        android:src="@drawable/ic_percentage" />
+
+
+                    <LinearLayout
+                        android:id="@+id/innerRow"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_5dp"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/column1_textView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Discount"
+                                android:textColor="@color/lightBlack"
+                                android:textSize="@dimen/_14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/column1_textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Turn On/Of Discount on One Click"
+                                android:textColor="@color/lightBlack"
+                                android:textSize="@dimen/_12dp"
+                                android:textStyle="normal" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/discountsubScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/_55dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/RGroup">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:id="@+id/current_location"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="18dp"
+                                android:id="@+id/all_location"/>
+
+                            </RadioGroup>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_5dp"
+                                android:layout_marginRight="@dimen/_5dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_5dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Turn on Discounts for my current location"
+                                    android:textSize="@dimen/_12dp" />
+
+                                <Switch
+                                    android:id="@+id/turnOffDicountSwitch"
+                                    android:layout_width="@dimen/_100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="@dimen/_10dp"
+                                    android:checked="false"
+                                    android:theme="@style/SCBSwitch" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_5dp"
+                                android:layout_marginRight="@dimen/_5dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_5dp">
+
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:text="Turn off All my Discounts "
+                                    android:textSize="@dimen/_12dp" />
+
+                                <Switch
+                                    android:id="@+id/alldisountSwitch"
+                                    android:layout_width="@dimen/_100dp"
+                                    android:layout_height="@dimen/_20dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="@dimen/_10dp"
+                                    android:checked="false"
+                                    android:theme="@style/SCBSwitch" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/manageDiscountPage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_15dp"
+                        android:paddingBottom="@dimen/_10dp"
+                        android:text="Take me to Manage Discounts Page."
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14dp" />
+
+
+                    <Button
+                        android:id="@+id/button_discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_22dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/login_border"
+                        android:elevation="@dimen/_50dp"
+                        android:text="SUBMIT"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_14dp"
+                        android:textStyle="bold" />
+
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/lateCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10dp"
+            android:background="#fff"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="@dimen/_5dp"
+            card_view:elevation="@dimen/_5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/_55dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/laterowContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/_55dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/lateimg"
+                        android:layout_width="@dimen/_55dp"
+                        android:layout_height="@dimen/_55dp"
+                        android:layout_margin="@dimen/_5dp"
+                        android:src="@drawable/ic_circular_clock" />
+
+
+                    <LinearLayout
+                        android:id="@+id/lateinnerRow"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_5dp"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/latecolumn1_textView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="I will be late."
+                                android:textColor="@color/lightBlack"
+                                android:textSize="@dimen/_14dp"
+                                android:textStyle="bold" />
+
+
+
+                            <TextView
+                                android:id="@+id/latecolumn1_textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mark Dealy time for your next schedule Location for convenience of your paients"
+                                android:textColor="@color/lightBlack"
+                                android:textSize="@dimen/_12dp"
+                                android:textStyle="normal" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/latesubScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/_55dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_15dp"
+                        android:layout_marginRight="@dimen/_5dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="i'll be late for"
+                            android:textSize="@dimen/_12dp" />
+
+                        <EditText
+                            android:id="@+id/totime"
+                            android:layout_width="@dimen/_30dp"
+                            android:layout_height="@dimen/_25dp"
+                            android:background="@drawable/edittext_top_bg"
+                            android:padding="@dimen/_5dp"
+                            android:textSize="@dimen/_12dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5dp"
+                            android:layout_weight="1"
+                            android:text="Hours"
+                            android:textSize="@dimen/_12dp" />
+
+
+                        <EditText
+                            android:id="@+id/fromtime"
+                            android:layout_width="@dimen/_30dp"
+                            android:layout_height="@dimen/_25dp"
+                            android:background="@drawable/edittext_top_bg"
+                            android:padding="@dimen/_5dp"
+                            android:textSize="@dimen/_12dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5dp"
+                            android:layout_weight="1"
+                            android:text="Minutes"
+                            android:textSize="@dimen/_12dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5dp"
+                        android:layout_marginRight="@dimen/_5dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:text="Mark Delay for my Next Location "
+                            android:textSize="@dimen/_12dp" />
+
+                        <Switch
+                            android:id="@+id/nextLocationSwitch"
+                            android:layout_width="@dimen/_80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_10dp"
+                            android:checked="false"
+                            android:theme="@style/SCBSwitch"                             android:layout_height="@dimen/_20dp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5dp"
+                        android:layout_marginRight="@dimen/_5dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:text="Mark Delay for Today's All Location"
+                            android:textSize="@dimen/_12dp" />
+
+                        <Switch
+                            android:id="@+id/totalallLocationSwitch"
+                            android:layout_width="@dimen/_80dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_10dp"
+                            android:checked="false"
+                            android:theme="@style/SCBSwitch"  />
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/sendNotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_22dp"
+                        android:background="@drawable/login_border"
+                        android:elevation="@dimen/_50dp"
+                        android:text="Send Delay  Notification to my Patients"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_14dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/timmingText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_15dp"
+                        android:paddingBottom="@dimen/_10dp"
+                        android:text="Take me to Manage Timming Page."
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14dp" />
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/timeoffCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10dp"
+            android:background="#fff"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="@dimen/_5dp"
+            card_view:elevation="@dimen/_5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/_55dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/timeoffrowContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/_55dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/timeoffimg"
+                        android:layout_width="@dimen/_55dp"
+                        android:layout_height="@dimen/_55dp"
+                        android:layout_margin="@dimen/_5dp"
+                        android:src="@drawable/ic_hot_cup_of_coffee" />
+
+
+                    <LinearLayout
+                        android:id="@+id/timeoffinnerRow"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_5dp"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/timeoffcolumn1_textView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Take Time-Off"
+                                android:textColor="@color/lightBlack"
+                                android:textSize="@dimen/_14dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/timeoff_textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mark Time-off and all your appointments/meeting will be on hold"
+                                android:textColor="@color/lightBlack"
+                                android:textSize="@dimen/_12dp"
+                                android:textStyle="normal" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timeoffsubScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/_55dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_5dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5dp"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.90"
+                            android:layout_marginLeft="50dp"
+                            android:text=" I am taking time-off, Cancel/Hold \n all my meetings/appointments for"
+                            android:textSize="@dimen/_12dp" />
+
+                        <EditText
+                            android:id="@+id/timelateoff"
+                            android:layout_width="@dimen/_30dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="@dimen/_10dp"
+                            android:background="@drawable/edittext_top_bg"
+                            android:textSize="@dimen/_12dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5dp"
+                            android:layout_weight="1"
+                            android:text="Days"
+                            android:gravity="left"
+                            android:textSize="@dimen/_12dp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_20dp"
+                        android:layout_marginRight="@dimen/_5dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Enable Time off"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12dp" />
+
+                        <Switch
+                            android:id="@+id/timeoffSwitch"
+                            android:layout_width="@dimen/_80dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_10dp"
+                            android:checked="false"
+                            android:theme="@style/SCBSwitch"  />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/sendNotificationtime"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_15dp"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:background="@drawable/login_border"
+                        android:elevation="@dimen/_50dp"
+                        android:text="Send Time off  Notification to my Patients"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_14dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/activity_dashboard_drawer"
+        android:id="@+id/navigation_vieww"
+        app:headerLayout="@layout/nav_header_dashboard"
+        android:layout_gravity="start|bottom">
+
+        <include
+            android:id="@+id/navHader"
+            layout="@layout/nav_header_dashboard" />
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listExpandLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_15dp"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:background="@color/bgcolor"
+    android:minHeight="@dimen/_40dp"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/lblListHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:layout_weight="1"
+        android:text=" "
+        android:textColor="@color/primary_text"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/timeFillLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:focusable="false" />
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/timeFillLayout"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:visibility="gone"-->
+    <!--android:focusable="false"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:focusableInTouchMode="false"-->
+    <!--android:layout_marginLeft="@dimen/_10dp"-->
+    <!--android:layout_weight="1">-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/frommin"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/frommin1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text=":" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/fromsec"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/fromsec1"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="-" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/frommin2"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/frommin3"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text=":" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/fromsec2"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/fromsec3"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textColor="@color/hint_grey"-->
+    <!--android:text="HRS" />-->
+
+    <!--</LinearLayout>-->
+
+    <ImageView
+        android:id="@+id/expand"
+        android:layout_width="@dimen/_20dp"
+        android:layout_height="@dimen/_20dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/_18dp"
+        android:gravity="center_horizontal"
+        android:src="@drawable/ic_down_arrow"
+        android:textColor="@color/lightBlack"
+        android:textSize="@dimen/_15dp" />
+
+    <ImageView
+        android:id="@+id/collapse"
+        android:layout_width="@dimen/_20dp"
+        android:layout_height="@dimen/_20dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="@dimen/_18dp"
+        android:src="@drawable/ic_up_arrow"
+        android:textColor="@color/lightBlack"
+        android:textSize="@dimen/_15dp"
+        android:visibility="gone" />
+
+
+
+</LinearLayout>

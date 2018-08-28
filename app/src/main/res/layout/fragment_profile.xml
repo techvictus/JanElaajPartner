@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:background="@color/Body_bg"
+    android:layout_width="match_parent" >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimValue_20"
+        android:gravity="center"
+        android:text="Profile"
+        android:textSize="@dimen/dimTextSize_16"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimValue_20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.janelaaj.component.CircleImageView
+                android:layout_width="@dimen/size_90px"
+                android:layout_height="@dimen/size_90px"
+                android:id="@+id/doctorImage"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimValue_10"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dr. Ashish Ahuja"
+                    android:textStyle="bold"
+                    android:id="@+id/name"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/dimTextSize_16" />
+
+                <TextView
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23, Male"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/dimTextSize_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/speciality"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/dimTextSize_16" />
+
+                <TextView
+                    android:id="@+id/experience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20 Years with Apollo Group"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/dimTextSize_16"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/information_text"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/dimTextSize_16"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_edit"
+                    android:id="@+id/edit_image"
+                    android:layout_margin="20dp"/>
+
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:id="@+id/edit_information"
+                    android:visibility="gone"
+                    android:textColorHint="@color/secondary_text">
+
+
+
+
+                    <EditText
+                        android:id="@+id/discussionDescription"
+                        style="@style/Widget.AppCompat.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:ems="25"
+                        android:background="@color/white"
+                        android:padding="15dp"
+                        android:gravity="top"
+                        android:hint="About Me (This will be visible to the users)"
+                        android:inputType="textMultiLine"
+                        android:maxHeight="@android:dimen/thumbnail_height"
+                        android:maxLength="300"
+                        android:scrollIndicators="right"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHighlight="@color/secondary_text"
+                        android:textColorHint="@color/secondary_text"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dimValue_20"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/dimValue_20"
+            android:background="@drawable/button_background2"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:text="Save "
+            android:layout_marginBottom="10dp"
+            android:textColor="#737373" />
+
+        <Button
+            android:id="@+id/save_button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dimValue_20"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/dimValue_20"
+            android:background="@drawable/button_background2"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:text="Save "
+            android:layout_marginBottom="10dp"
+            android:textColor="#737373" />
+
+        <Button
+            android:id="@+id/lessbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="@dimen/dimValue_20"
+            android:layout_marginRight="@dimen/dimValue_20"
+            android:background="@drawable/button_background2"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:text="Edit Profile Details"
+            android:textColor="#737373" />
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

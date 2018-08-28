@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:layout_height="match_parent"
+    android:background="@color/background_blue"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="@dimen/_10dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_blue"
+            android:orientation="vertical">
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:textSize="24sp"-->
+                    <!--android:id="@+id/from_time_display"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:textSize="24dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/to_time_display"/>-->
+
+
+            <!--</LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_29dp"
+                android:layout_marginRight="@dimen/_29dp"
+                android:minHeight="@dimen/_50dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/from"
+                    android:layout_width="@dimen/_60dp"
+                    android:layout_height="@dimen/_60dp"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@drawable/circle_bg3"
+                    android:padding="@dimen/_10dp"
+                    android:text="From"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_12dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/_40dp"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10dp"
+                    android:padding="@dimen/_10dp"
+                    android:src="@drawable/ic_information"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_18dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/to"
+                    android:layout_width="@dimen/_60dp"
+                    android:layout_height="@dimen/_60dp"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@drawable/circle_bg3"
+                    android:padding="@dimen/_10dp"
+                    android:text="To"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_12dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:background="@color/hint_grey" />
+
+            <!--<CheckBox-->
+                <!--android:id="@+id/repeatCHeckBox"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="@dimen/_10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="REPEAT"-->
+                <!--android:theme="@style/togelTheme"-->
+                <!--android:padding="@dimen/_10dp"-->
+                <!--android:textSize="@dimen/_12dp"-->
+                <!--android:textStyle="bold" />-->
+
+            <LinearLayout
+                android:id="@+id/weekNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:padding="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="SUN"
+                    android:textAlignment="center"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"                    android:layout_weight="1"
+                    android:text="MON"
+                    android:id="@+id/mon"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"                    android:layout_weight="1"
+                    android:text="TUE"
+                    android:id="@+id/tue"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"                    android:layout_weight="1"
+                    android:text="WED"
+                    android:padding="8dp"
+                    android:id="@+id/wed"
+                    android:textAlignment="center"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"                    android:layout_weight="1"
+                    android:text="THU"
+                    android:padding="8dp"
+                    android:id="@+id/thu"
+                    android:textAlignment="center"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"                    android:layout_weight="1"
+                    android:text="FRI"
+                    android:padding="8dp"
+                    android:id="@+id/fri"
+                    android:textAlignment="center"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"                    android:layout_weight="1"
+                    android:text="SAT"
+                    android:id="@+id/sat"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

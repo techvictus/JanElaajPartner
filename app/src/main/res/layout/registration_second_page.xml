@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/_20dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_18dp"
+        android:layout_marginRight="@dimen/_18dp"
+        android:orientation="vertical">
+
+        <!--<Spinner-->
+            <!--android:id="@+id/specilization_nameLayout"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:entries="@array/Specialization"-->
+            <!--android:layout_marginTop="@dimen/_28dp"-->
+            <!--android:spinnerMode="dropdown"-->
+            <!--android:drawSelectorOnTop="true"-->
+            <!--android:popupBackground="@color/white" />-->
+
+        <Spinner
+            android:id="@+id/specilization_nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:layout_marginTop="@dimen/_28dp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/medirno_nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_28dp">
+
+            <EditText
+                android:id="@+id/medicalregiNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="text"
+                android:drawableRight="@drawable/ic_information"
+                android:paddingRight="@dimen/_10dp"
+                android:hint="Medical Registration Number *"
+                android:textSize="@dimen/_14dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/medicalNo_nameLayout"
+            android:layout_width="match_parent"
+            android:focusable="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:entries="@array/Registration_Council"
+          />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+        <Spinner
+            android:id="@+id/regicouncle_nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:focusedByDefault="true"
+            android:entries="@array/Registration_Year"
+            android:layout_marginTop="@dimen/_28dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/expericne_nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_28dp">
+
+            <EditText
+                android:id="@+id/experinceView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_information"
+                android:hint="Career Experience in Years *"
+                android:inputType="number"
+                android:maxLength="2"
+                android:paddingRight="@dimen/_10dp"
+                android:textSize="@dimen/_14dp" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:layout_marginTop="@dimen/dimValue_30"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/signupLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/login_border"
+            android:minWidth="@dimen/_135dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:elevation="@dimen/_20dp"
+                android:gravity="center"
+                android:text="Register"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

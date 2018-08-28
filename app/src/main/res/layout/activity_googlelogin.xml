@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+    android:orientation="vertical"
+    android:id="@+id/splashContainer"
+    android:background="#FFF">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splashImage"
+        android:scaleType="centerCrop"
+        android:src="@drawable/doctorpic"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.92"
+        android:background="@android:color/transparent"
+        android:src="@drawable/splash_screen_rectangle"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:orientation="vertical">
+
+                <com.janelaaj.component.CircleImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="@dimen/_100dp"
+                    android:layout_height="@dimen/_100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/headertitel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Text_for_screens"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:text="@string/titlename"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_30dp" />
+
+                <TextView
+                    android:id="@+id/headersubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/partner"
+                    android:textStyle="bold"
+                    android:textColor="@color/Text_for_screens"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_12dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp" />
+
+            <LinearLayout
+                android:id="@+id/logingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:elevation="@dimen/_5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/Text_for_screens"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:id="@+id/connected_to_your"
+                        android:text="Connected to your"
+                        android:textAlignment="center" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="7dp"
+                        android:src="@drawable/google_rounded_logo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Text_for_screens" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/Text_for_screens"
+                        android:layout_gravity="center"
+                        android:text=" account"
+                        android:id="@+id/account"
+                        android:textStyle="bold"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/gplusAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@drawable/login_gborder"
+                    android:text="ABC Def"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_16dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/complgplusRegiLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:background="@drawable/login_border"
+                    android:orientation="horizontal"
+                    android:textColor="@android:color/white">
+
+                    <Button
+                        android:id="@+id/complgplusRegistration"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_12dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:gravity="left|center"
+                        android:text="Complete Registration"
+                        android:textAllCaps="false"
+                        android:elevation="@dimen/_5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_16dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/_5dp"
+                        android:src="@drawable/ic_rightarrow" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

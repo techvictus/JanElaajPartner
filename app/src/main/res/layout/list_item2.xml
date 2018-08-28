@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="@dimen/_100dp"
+    app:cardBackgroundColor="@color/white"
+    android:orientation="vertical"
+    android:focusable="false"
+    android:layout_marginRight="@dimen/_14dp"
+    android:layout_marginLeft="@dimen/_14dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="@dimen/_5dp"
+    app:cardElevation="@dimen/_5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_marginRight="@dimen/_14dp"
+    android:layout_marginLeft="@dimen/_14dp"
+    android:elevation="@dimen/_20dp"
+    android:paddingBottom="@dimen/_10dp"
+    android:focusable="false"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"/>
+
+
+
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#CCC"
+            android:paddingTop="1dp"
+            android:stretchColumns="1"
+            android:layout_marginTop="15dp"
+            android:id="@+id/tlTabklej01">
+
+            <TableRow
+                android:background="#CCC"
+                android:paddingBottom="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="1dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="#FFF"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:id="@+id/sun"
+                    android:gravity="center"
+                    android:text="SUN" />
+                <TextView
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:id="@+id/sunday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF" />
+            </TableRow>
+
+            <TableRow
+                android:background="#CCC"
+                android:paddingBottom="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"                    android:layout_marginLeft="1dp"
+                    android:background="#FFF"
+                    android:padding="5dp"
+                    android:id="@+id/mon"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="MON" />
+                <TextView
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:id="@+id/monday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"                    android:background="#FFF" />
+            </TableRow>
+
+
+            <TableRow
+                android:background="#CCC"
+                android:paddingBottom="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:background="#FFF"
+                    android:padding="5dp"
+                    android:id="@+id/tue"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="TUE" />
+                <TextView
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:id="@+id/tuesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF"/>
+            </TableRow>
+
+
+
+            <TableRow
+                android:background="#CCC"
+                android:paddingBottom="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="1dp">
+
+                <TextView
+                    android:id="@+id/wed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:background="#FFF"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="WED" />
+                <TextView
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:id="@+id/wednesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"                    android:background="#FFF" />
+            </TableRow>
+
+
+
+            <TableRow
+                android:background="#CCC"
+                android:paddingBottom="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"                    android:layout_marginLeft="1dp"
+                    android:background="#FFF"
+                    android:padding="5dp"
+                    android:id="@+id/thu"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="THU" />
+                <TextView
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:id="@+id/thursday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"                    android:background="#FFF" />
+            </TableRow>
+
+
+            <TableRow
+                android:background="#CCC"
+                android:paddingBottom="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"                    android:layout_marginLeft="1dp"
+                    android:background="#FFF"
+                    android:padding="5dp"
+                    android:id="@+id/fri"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="FRI" />
+                <TextView
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:id="@+id/friday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"                    android:background="#FFF" />
+            </TableRow>
+
+
+            <TableRow
+                android:background="#CCC"
+                android:paddingBottom="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"                    android:layout_marginLeft="1dp"
+                    android:background="#FFF"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:id="@+id/sat"
+                    android:text="SAT" />
+                <TextView
+                    android:layout_marginLeft="1dp"
+                    android:padding="5dp"
+                    android:id="@+id/saturday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"                    android:background="#FFF" />
+            </TableRow>
+
+        </TableLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*Discounted Rates"
+        android:gravity="right"
+        android:layout_marginTop="10dp"/>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CCC"
+        android:paddingTop="1dp"
+        android:layout_marginTop="10dp"
+        android:stretchColumns="1"
+        android:id="@+id/tlTablej01">
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/services"
+                android:text="SERVICES" />
+
+            <TextView
+                android:id="@+id/rate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="#FFF"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="RATE" />
+
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:id="@+id/discounted_rate"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="D RATE"/>
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:id="@+id/services1"
+                android:gravity="left"
+                android:padding="6dp"
+                android:textSize="12sp"
+                android:layout_weight="2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:id="@+id/rate1" />
+
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:id="@+id/discounted_rate1"
+                android:layout_height="wrap_content"
+                android:background="#FFF" />
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:id="@+id/services2"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:padding="6dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:id="@+id/rate2" />
+
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:id="@+id/discounted_rate2"
+                android:layout_height="wrap_content"
+                android:background="#FFF" />
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:id="@+id/services3" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:id="@+id/rate3"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:id="@+id/discounted_rate3"
+                android:layout_height="wrap_content"
+                android:background="#FFF" />
+        </TableRow>
+
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:layout_weight="2"
+                android:padding="6dp"
+                android:id="@+id/services4" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:layout_weight="1"
+                android:id="@+id/rate4"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:id="@+id/discounted_rate4"
+                android:layout_height="wrap_content"
+                android:background="#FFF" />
+        </TableRow>
+
+
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:layout_weight="2"
+                android:padding="6dp"
+                android:id="@+id/services5" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:layout_weight="1"
+                android:id="@+id/rate5"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:id="@+id/discounted_rate5"
+                android:layout_height="wrap_content"
+                android:background="#FFF" />
+        </TableRow>
+
+
+
+
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:layout_weight="2"
+                android:padding="6dp"
+                android:id="@+id/services6" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:layout_weight="1"
+                android:id="@+id/rate6"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:id="@+id/discounted_rate6"
+                android:layout_height="wrap_content"
+                android:background="#FFF" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+    </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+

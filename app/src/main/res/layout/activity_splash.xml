@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+    android:orientation="vertical"
+    android:id="@+id/splashContainer"
+    android:background="#FFF">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splashImage"
+        android:scaleType="centerCrop"
+        android:src="@drawable/doctorpic"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.92"
+        android:background="@android:color/transparent"
+        android:src="@drawable/splash_screen_rectangle"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.janelaaj.component.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:id="@+id/title"
+            android:textColor="#5C5C5C"
+            android:text="Jan Elaaj"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:id="@+id/second_title"
+            android:gravity="center"
+            android:textColor="#5C5C5C"
+            android:text="P A R T N E R "/>
+    </LinearLayout>
+
+
+
+
+
+
+</FrameLayout>
