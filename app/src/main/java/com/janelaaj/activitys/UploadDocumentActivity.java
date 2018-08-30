@@ -552,6 +552,7 @@ public class UploadDocumentActivity extends AppCompatActivity implements View.On
 
         this.number_edittext = findViewById(R.id.number_edittext);
         this.attach = findViewById(R.id.attach);
+        this.attach2 = findViewById(R.id.attach2);
 
 
         this.exit = findViewById(R.id.exit);

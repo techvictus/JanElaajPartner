@@ -367,11 +367,8 @@ public class ProfileRegistrationActivity extends AppCompatActivity {
      */
    /* public class MyViewPagerAdapter extends PagerAdapter {
         private LayoutInflater layoutInflater;
-
-
         public MyViewPagerAdapter() {
         }
-
         *//*  R.layout.registrationfirst_page,
           R.layout.registration_second_page,
   *//*
@@ -379,28 +376,20 @@ public class ProfileRegistrationActivity extends AppCompatActivity {
         public Object instantiateItem(ViewGroup container, int position) {
             layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
           *//*  if (R.layout.registrationfirst_page == layouts[position]) {
-
             }else{
-
             }*//*
             View view = layoutInflater.inflate(layouts[position], container, false);
-
             container.addView(view);
-
             return view;
         }
-
         @Override
         public int getCount() {
             return layouts.length;
         }
-
         @Override
         public boolean isViewFromObject(View view, Object obj) {
             return view == obj;
         }
-
-
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
             View view = (View) object;
@@ -531,7 +520,7 @@ public class ProfileRegistrationActivity extends AppCompatActivity {
         }
 
 
-            profileimage.setImageBitmap(thumbnail);
+        profileimage.setImageBitmap(thumbnail);
 
     }
 
@@ -578,14 +567,14 @@ public class ProfileRegistrationActivity extends AppCompatActivity {
             }
 
 //            if(dataSize>10000000 || f.length()>10000000)
-                if(dataSize>500000)
-                {
-                    Toast.makeText(this, "Please Select A Smaller Image", Toast.LENGTH_LONG).show();
-                    profileimage.setImageResource(R.drawable.photo);
-                }
-                else {
-                    profileimage.setImageBitmap(bm);
-                }
+            if(dataSize>500000)
+            {
+                Toast.makeText(this, "Please Select A Smaller Image", Toast.LENGTH_LONG).show();
+                profileimage.setImageResource(R.drawable.photo);
+            }
+            else {
+                profileimage.setImageBitmap(bm);
+            }
         }
 
     }
@@ -596,7 +585,7 @@ public class ProfileRegistrationActivity extends AppCompatActivity {
         ByteArrayOutputStream bao = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 75, bao);
         byte[] imgData = bao.toByteArray();
-          EncodedBase64 = android.util.Base64.encodeToString(imgData, android.util.Base64.DEFAULT);
+        EncodedBase64 = android.util.Base64.encodeToString(imgData, android.util.Base64.DEFAULT);
 
         return EncodedBase64;
     }
@@ -790,7 +779,7 @@ public class ProfileRegistrationActivity extends AppCompatActivity {
                 @Override
                 public void onDone(String result, boolean isComplete) {
                     if (isComplete) {
-                       vitalsignupinfoModel  mainContent = new Gson().fromJson(result, vitalsignupinfoModel.class);
+                        vitalsignupinfoModel  mainContent = new Gson().fromJson(result, vitalsignupinfoModel.class);
                         if (mainContent != null) {
                             if (mainContent.getStatus().equals("SUCCESS")) {
 

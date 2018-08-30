@@ -82,13 +82,13 @@ public class ProfileFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private static final int OPEN_PDF = 2;
     public ImageView edit_image;
-    public Button savebutton,savebutton2;
-    public TextView information_text,name,age,speciality,experience;
+    public Button savebutton, savebutton2;
+    public TextView information_text, name, age, speciality, experience;
     public TextInputLayout edit_information;
     private View view;
     Integer userage;
-    String current_location_id,docid,dlmid;
-    String doctor_name,doctor_dob,doctor_gender,doctor_speciality,doctor_introduction,doctor_experience;
+    String current_location_id, docid, dlmid;
+    String doctor_name, doctor_dob, doctor_gender, doctor_speciality, doctor_introduction, doctor_experience;
     ImageView doctorImage;
     String imagefetch;
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
@@ -96,10 +96,10 @@ public class ProfileFragment extends Fragment {
     private static final int SELECT_PHOTO = 100;
     private Bitmap bm;
     private String EncodedBase64 = "";
-    String image="";
+    String image = "";
     File f;
     Integer dataSize;
-    String Role,Currentloc;
+    String Role, Currentloc;
 
 
     // TODO: Rename and change types of parameters
@@ -151,9 +151,7 @@ public class ProfileFragment extends Fragment {
         Role = activity.getRole();
 
 
-
     }
-
 
 
     @Override
@@ -161,7 +159,6 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_profile, container, false);
-
 
 
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
@@ -193,26 +190,20 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        if(doctor_speciality.equals("1"))
-        {
+        if (doctor_speciality.equals("1")) {
             speciality.setText("Cardiology");
-        }else if(doctor_speciality.equals("2"))
-        {
+        } else if (doctor_speciality.equals("2")) {
             speciality.setText("E.N.T");
-        }else if(doctor_speciality.equals("2"))
-        {
+        } else if (doctor_speciality.equals("2")) {
             speciality.setText("Opthalmology");
-        }else if(doctor_speciality.equals("3"))
-        {
+        } else if (doctor_speciality.equals("3")) {
             speciality.setText("Dental");
-        }else if(doctor_speciality.equals("4"))
-        {
+        } else if (doctor_speciality.equals("4")) {
             speciality.setText("General Physician");
         }
 
 
-        if(doctor_introduction != null)
-        {
+        if (doctor_introduction != null) {
             information_text.setVisibility(View.VISIBLE);
             information_text.setText(doctor_introduction);
 
@@ -224,7 +215,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
                 edit_information.setVisibility(View.VISIBLE);
                 savebutton.setVisibility(View.VISIBLE);
-                edit_information.getEditText().setText(information_text.getText(),TextView.BufferType.EDITABLE);
+                edit_information.getEditText().setText(information_text.getText(), TextView.BufferType.EDITABLE);
 
             }
         });
@@ -234,33 +225,31 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
                 String to_send = edit_information.getEditText().getText().toString();
                 DashboardActivity activity = (DashboardActivity) getActivity();
-                edit_information.getEditText().setText(to_send,TextView.BufferType.EDITABLE);
+                edit_information.getEditText().setText(to_send, TextView.BufferType.EDITABLE);
                 activity.setdoctor_introduction(to_send);
-                userValidate(docid,to_send);
+                userValidate(docid, to_send);
 
-                Log.i("dsadadsadas",docid + " "+to_send);
+                Log.i("dsadadsadas", docid + " " + to_send);
                 edit_information.setVisibility(View.GONE);
                 information_text.setVisibility(View.VISIBLE);
                 information_text.setText(to_send);
 
-                Log.i("inform",to_send);
+                Log.i("inform", to_send);
 
 
             }
         });
 
 
-        Log.i("sadafsf",imagefetch+"image fetch val");
+        Log.i("sadafsf", imagefetch + "image fetch val");
 
-        if(!imagefetch.equals("N") && !imagefetch.equals("")) {
-            Log.i("sadafsf","in !imagefetch"+imagefetch);
+        if (!imagefetch.equals("N") && !imagefetch.equals("")) {
+            Log.i("sadafsf", "in !imagefetch" + imagefetch);
             byte[] decodedString = Base64.decode(imagefetch, Base64.DEFAULT);
             Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
             doctorImage.setImageBitmap(decodedByte);
-        }
-        else
-        {
-            Log.i("sadafsf","in else"+imagefetch);
+        } else {
+            Log.i("sadafsf", "in else" + imagefetch);
             doctorImage.setImageResource(R.drawable.photo);
             doctorImage.setEnabled(true);
         }
@@ -268,10 +257,9 @@ public class ProfileFragment extends Fragment {
         savebutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userValidate2(docid,image);
+                userValidate2(docid, image);
             }
         });
-
 
 
         return view;
@@ -279,7 +267,7 @@ public class ProfileFragment extends Fragment {
 
 
     private void selectImage() {
-        final CharSequence[] items = {"Take Photo", "Choose from Library","Choose from PDF",
+        final CharSequence[] items = {"Take Photo", "Choose from Library", "Choose from PDF",
                 "Cancel"};
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Add Photo!");
@@ -295,12 +283,11 @@ public class ProfileFragment extends Fragment {
                     userChoosenTask = "Choose from Library";
                     if (result)
                         galleryIntent();
-                }else if (items[item].equals("Choose from PDF")) {
+                } else if (items[item].equals("Choose from PDF")) {
                     userChoosenTask = "Choose from PDF";
                     if (result)
                         pdfIntent();
-                }
-                else if (items[item].equals("Cancel")) {
+                } else if (items[item].equals("Cancel")) {
                     dialog.dismiss();
                 }
             }
@@ -351,9 +338,9 @@ public class ProfileFragment extends Fragment {
                         cameraIntent();
                     else if (userChoosenTask.equals("Choose from Library"))
                         galleryIntent();
-                else if (userChoosenTask.equals("Choose from PDF"))
-                    pdfIntent();
-                else {
+                    else if (userChoosenTask.equals("Choose from PDF"))
+                        pdfIntent();
+                    else {
                         Toast.makeText(getActivity(), "Please Accept Permissions", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -390,7 +377,7 @@ public class ProfileFragment extends Fragment {
                 onSelectFromGalleryResult(data);
             else if (requestCode == REQUEST_CAMERA)
                 onCaptureImageResult(data);
-            else if(requestCode == OPEN_PDF);
+            else if (requestCode == OPEN_PDF) ;
 
 
         }
@@ -398,7 +385,7 @@ public class ProfileFragment extends Fragment {
 
     private void onCaptureImageResult(Intent data) {
 
-        Log.i("sadafsf","in onCaptureImageResult with Data "+ data);
+        Log.i("sadafsf", "in onCaptureImageResult with Data " + data);
         Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         thumbnail.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
@@ -410,7 +397,7 @@ public class ProfileFragment extends Fragment {
 
         FileOutputStream fo;
         try {
-            Log.i("sadafsf","in TRY of ONCAPTURE IMAGE");
+            Log.i("sadafsf", "in TRY of ONCAPTURE IMAGE");
             destination.createNewFile();
             fo = new FileOutputStream(destination);
             fo.write(bytes.toByteArray());
@@ -441,24 +428,21 @@ public class ProfileFragment extends Fragment {
             }
             //   ImageButton.setText("UPLOAD SUCCESS FROM GALLERY");
 
-            Uri uri  = data.getData();
+            Uri uri = data.getData();
             String scheme = uri.getScheme();
             System.out.println("Scheme type " + scheme);
-            if(scheme.equals(ContentResolver.SCHEME_CONTENT))
-            {
+            if (scheme.equals(ContentResolver.SCHEME_CONTENT)) {
                 try {
-                    InputStream fileInputStream=getActivity().getContentResolver().openInputStream(uri);
+                    InputStream fileInputStream = getActivity().getContentResolver().openInputStream(uri);
                     dataSize = fileInputStream.available();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
-                Log.i("sadafsf","in gallery scheme content"+ String.valueOf(dataSize));
+                Log.i("sadafsf", "in gallery scheme content" + String.valueOf(dataSize));
 //                System.out.println("File size in bytes"+dataSize);
 
-            }
-            else if(scheme.equals(ContentResolver.SCHEME_FILE))
-            {
+            } else if (scheme.equals(ContentResolver.SCHEME_FILE)) {
                 String path = uri.getPath();
                 try {
                     f = new File(path);
@@ -466,17 +450,15 @@ public class ProfileFragment extends Fragment {
                     e.printStackTrace();
                 }
 
-                Log.i("sadafsf","in gallery scheme file" + String.valueOf(f.length()));
+                Log.i("sadafsf", "in gallery scheme file" + String.valueOf(f.length()));
 //                System.out.println("File size in bytes"+f.length());
             }
 
 //            if(dataSize>10000000 || f.length()>10000000)
-            if(dataSize>10000000)
-            {
+            if (dataSize > 10000000) {
                 doctorImage.setImageResource(R.drawable.photo);
                 Toast.makeText(getActivity(), "Please Select A Smaller Image", Toast.LENGTH_LONG).show();
-            }
-            else {
+            } else {
                 doctorImage.setImageBitmap(bm);
                 savebutton2.setVisibility(View.VISIBLE);
                 savebutton.setVisibility(View.INVISIBLE);
@@ -488,22 +470,21 @@ public class ProfileFragment extends Fragment {
 
 
     public String ConvertBitmapToBase64String(Bitmap bitmap) {
-        Log.i("sadafsf","in ConvertBitmapToBase64");
+        Log.i("sadafsf", "in ConvertBitmapToBase64");
         EncodedBase64 = null;
         ByteArrayOutputStream bao = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 75, bao);
         byte[] imgData = bao.toByteArray();
         EncodedBase64 = android.util.Base64.encodeToString(imgData, android.util.Base64.DEFAULT);
         image = EncodedBase64;
-        Log.i("sadafsf","EncodedBase64 of this image"+ EncodedBase64);
+        Log.i("sadafsf", "EncodedBase64 of this image" + EncodedBase64);
         return EncodedBase64;
     }
 
 
-
     public String getStringFile(File f) {
         InputStream inputStream = null;
-        String encodedFile= "", lastVal;
+        String encodedFile = "", lastVal;
         try {
             inputStream = new FileInputStream(f.getAbsolutePath());
 
@@ -516,12 +497,10 @@ public class ProfileFragment extends Fragment {
                 output64.write(buffer, 0, bytesRead);
             }
             output64.close();
-            encodedFile =  output.toString();
-        }
-        catch (FileNotFoundException e1 ) {
+            encodedFile = output.toString();
+        } catch (FileNotFoundException e1) {
             e1.printStackTrace();
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         lastVal = encodedFile;
@@ -529,7 +508,7 @@ public class ProfileFragment extends Fragment {
     }
 
 
-    private void userValidate(final String Doctorid,String introduction) {
+    private void userValidate(final String Doctorid, String introduction) {
 
         if (Utility.isOnline(getActivity())) {
             JSONObject object = new JSONObject();
@@ -537,9 +516,7 @@ public class ProfileFragment extends Fragment {
 
                 object.put("docid", Doctorid);
                 object.put("introduction", introduction);
-            }
-
-            catch (JSONException e) {
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
 
@@ -578,17 +555,15 @@ public class ProfileFragment extends Fragment {
     }
 
 
-    private void userValidate2(final String Doctorid,String image) {
+    private void userValidate2(final String Doctorid, String image) {
 
         if (Utility.isOnline(getActivity())) {
             JSONObject object = new JSONObject();
             try {
-                Log.i("sadafsf",image+"image api called");
+                Log.i("sadafsf", image + "image api called");
                 object.put("docid", Doctorid);
                 object.put("image", image);
-            }
-
-            catch (JSONException e) {
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
 
@@ -627,5 +602,4 @@ public class ProfileFragment extends Fragment {
     }
 
 
-
-    }
+}

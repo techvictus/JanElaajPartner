@@ -334,10 +334,10 @@ public class Choose_Location extends AppCompatActivity {
                                 deg.add(ms);
                                 deg.add(diploma);
 
-                                Log.i("sadafsf",mbbs);
-                                Log.i("sadafsf",md);
-                                Log.i("sadafsf",ms);
-                                Log.i("sadafsf",diploma);
+//                                Log.i("sadafsf",mbbs);
+//                                Log.i("sadafsf",md);
+//                                Log.i("sadafsf",ms);
+//                                Log.i("sadafsf",diploma);
 
 
 
